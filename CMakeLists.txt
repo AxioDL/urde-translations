@@ -11,5 +11,3 @@ add_custom_command(OUTPUT ${LOCALES_OUT} COMMAND $<TARGET_FILE:genlocales>
 add_library(UrdeLocales ${LOCALES_OUT} locale.hpp locale.cpp)
 target_link_libraries(UrdeLocales fmt)
 target_include_directories(UrdeLocales PUBLIC ${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_CURRENT_BINARY_DIR})
-
-target_link_libraries(specter PUBLIC UrdeLocales)
